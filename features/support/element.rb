@@ -10,4 +10,25 @@ class Element
   def visible?
     find.visible?
   end
+
+  def isVisible
+    unless visible?
+      raise "element not visible"
+    end
+  end
+
+  def click
+    find.click
+  end 
+
+  def send_keys(value)
+    find.send_keys value
+  end 
+
+  def notVisible
+    if visible?
+      raise "element is visible"
+    end
+  end
+
 end
