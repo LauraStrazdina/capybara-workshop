@@ -17,6 +17,12 @@ class Element
     end
   end
 
+  def notVisible
+    if visible?
+      raise "element is visible"
+    end
+  end
+
   def click
     find.click
   end
